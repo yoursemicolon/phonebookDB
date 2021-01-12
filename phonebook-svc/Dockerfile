@@ -2,8 +2,7 @@ FROM python:3.8-alpine
 
 RUN apk update && apk add --no-cache bash py3-virtualenv
 RUN mkdir /apps
-ADD phonebook.db /apps
-ADD PhoneBookModel.py /apps
+ADD PhoneBookModelRedis.py /apps
 ADD requirements.txt /apps
 ADD Service.py /apps
 ADD start.sh /apps

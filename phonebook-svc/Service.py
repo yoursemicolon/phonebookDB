@@ -1,8 +1,8 @@
-from flask import Flask,current_app, jsonify, make_response, Response,  Blueprint, abort,render_template, request, redirect,render_template_string, url_for, send_from_directory
-from flask_restful import Api, Resource, reqparse,wraps
-import uuid
-import json
-from PhoneBookModel import *
+from flask import Flask, jsonify, request
+from flask_restful import Api, Resource
+from PhoneBookModelRedis import *
+#menggunakan PhoneBookModelRedis, untuk implementasi menggunakan redis kv store
+#service layer dari phonebook db tetap seperti biasa
 
 
 

@@ -3,4 +3,5 @@ flask_restful
 flask_cors
 uuid
 gunicorn
+redis
 

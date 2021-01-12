@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+   redis-server:
+     image: redis:5.0.10-alpine
+     restart: always
+     environment:
+       TESTING: 1
+   phonebook:
+     depends_on:
+       - redis-server
+     build: phonebook-svc
+     ports:
+       - "32000:32000"
+     restart: always
+     environment:
+       TESTING: 1
