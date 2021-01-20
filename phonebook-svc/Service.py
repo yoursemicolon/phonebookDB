@@ -63,7 +63,8 @@ app = get_blueprint(__name__)
 #dipindah ke wsgi.py
 if __name__=='__main__':
     #setup environment, untuk proses debuggind di pycharm
-    os.environ['REDIS_SERVER']='172.22.0.2'
+    os.environ['REDIS_SERVER']='172.25.0.2'
     app.run(host='0.0.0.0', port=32006, debug=True)
-#jika dijalankan dari pycharm, port yang digunakan adalah 32006
+#jika dijalankan dari pycharm, port yang digunakan adalah 32006, dan dapat diakses menggunakan localhost
+#ip dari redis-server dapat diketahui dari (docker inspect redis-server | grep "IPAddress")
 #jika dijalankan dari gunicorn, port yang digunakan adalah 32000 (lihat di script start.sh)
