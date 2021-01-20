@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_restful import Api, Resource
 from PhoneBookModelRedis import *
+import os
 #menggunakan PhoneBookModelRedis, untuk implementasi menggunakan redis kv store
 #service layer dari phonebook db tetap seperti biasa
 
@@ -61,4 +62,8 @@ app = get_blueprint(__name__)
 
 #dipindah ke wsgi.py
 if __name__=='__main__':
-    app.run(host='0.0.0.0', port=32000, debug=True)
+    #setup environment, untuk proses debuggind di pycharm
+    os.environ['REDIS_SERVER']='172.22.0.2'
+    app.run(host='0.0.0.0', port=32006, debug=True)
+#jika dijalankan dari pycharm, port yang digunakan adalah 32006
+#jika dijalankan dari gunicorn, port yang digunakan adalah 32000 (lihat di script start.sh)
