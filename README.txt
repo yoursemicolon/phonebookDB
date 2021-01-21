@@ -18,6 +18,17 @@ dalam repository redis-db ini:
 - redis-server terhubung ke phonebook service dengan menggunakan isolated network
   dengan nama "phonebookdb-network"
 
+DEPLOYMENT
+- Phonebook DB dapat dijalankan oleh penyewa (tenant)
+- Satu kesatuan service terdiri dari phonebookdb-service (sebagai frontend) dan redis-server (sebagai record storage)
+- Untuk menjalankan, jalankan file run-all.sh
+- Dalam run-all.sh, terdapat beberapa langkah
+* create network
+* run redis-server
+* run phonebookdb-service
+
+- Untuk menghentikan jalankan file stop-all.sh
+
 
 
 
