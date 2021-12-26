@@ -25,7 +25,7 @@ def isi_data_phonebook(nama='',alamat='',telp=''):
 
 if __name__=='__main__':
     #lihat isi phonebook
-    # print(lihat_isi_phonebook())
+    print(lihat_isi_phonebook())
     print(isi_data_phonebook(nama='Royyana',alamat='Ketintang',telp='123142'))
-    # print(lihat_isi_phonebook())
+    print(lihat_isi_phonebook())
 
