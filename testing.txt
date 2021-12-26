@@ -7,10 +7,10 @@ untuk membuat record di phonebook
   -H "Content-Type: application/json" \
 
 untuk mendapatkan detail record dengan berbasis id
- curl -X GET http://localhost:32000/phones/fe437958-2fa4-11eb-bf35-7fc0bd24c845
+ curl -X GET http://localhost:32000/phones/8bf094b2-6574-11ec-a05d-5c879c239a2d
 
 untuk menghapus record dengan berbasis id
- curl -X DELETE http://localhost:32000/phones/fe437958-2fa4-11eb-bf35-7fc0bd24c845
+ curl -X DELETE http://localhost:32000/phones/8bf094b2-6574-11ec-a05d-5c879c239a2d
 
 unutk mengupdate record dengan berbasis id
   curl -X PUT http://localhost:32000/phones/fe437958-2fa4-11eb-bf35-7fc0bd24c845 \
